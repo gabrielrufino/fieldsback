@@ -1,5 +1,12 @@
 const express = require('express')
 const fs = require('fs')
+const mongoose = require('mongoose')
+
+const uri = 'mongodb://localhost/fieldsback'
+mongoose.connect(uri, (err) => {
+	if (err)
+		console.log(err)
+})
 
 const app = express()
 app.use(express.static('public'))
