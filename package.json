@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gabrielrufino/fieldsback/issues"
   },
-  "homepage": "https://github.com/gabrielrufino/fieldsback#readme"
+  "homepage": "https://github.com/gabrielrufino/fieldsback#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
