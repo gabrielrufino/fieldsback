@@ -11,17 +11,26 @@
 		<header>
 			<hgroup>
 				<h1>fieldsback</h1>
+				<h2>The fast feedback system</h2>
 			</hgroup>
 		</header>
 		
-		<div id="form">
+		<div id="core">
 			<form method="post" action="thanks">
-				<label for="iName">Name: </label><br>
-				<input type="text" name="nName" id="iName" class="fields" placeholder="Gabriel Rufino"><br>
-				<label for="iFeedback">Feedback: </label><br>
-				<textarea name="nFeedback" id="iFeedback" rows="5" cols="60" placeholder="Write your feedback to us." class="fields"></textarea><br>
-				<input type="submit" value="Send it!">
-			</form>	
+				<label for="name">Name: </label>
+				<input type="text" name="name" id="name" class="fields" placeholder="Your Name"><br>
+				
+				<label for="email">E-mail: </label>
+				<input type="email" name="email" id="email" class="fields" placeholder="youremail@mail.com"><br>
+				
+				<label for="rating">Rating: </label>
+				1<input type="range" name="rating" id="rating" min="1" max="5">5<br>
+				
+				<label for="message">Message: </label><br>
+				<textarea name="message" id="message" rows="5" cols="60" class="fields" placeholder="We'd love to hear your opinion."></textarea><br>
+				
+				<button>Send it</button>
+			</form>
 		</div>
 	</body>
 </html>

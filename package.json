@@ -1,11 +1,12 @@
 {
   "name": "fieldsback",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "The fast feedback system",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node index.js",
+    "nodemon": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/gabrielrufino/fieldsback#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongoose": "^5.0.0-rc0"
   }
