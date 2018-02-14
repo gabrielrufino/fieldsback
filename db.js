@@ -1,15 +1,14 @@
 const mongoose = require('mongoose')
 const db = mongoose.connection
 
-const uri = 'mongodb://localhost/fieldsback'
-mongoose.connect(uri, (err) => {
+mongoose.connect('mongodb://localhost/fieldsback', (err) => {
 	if (err)
-		console.log(err)
+		throw err
 })
 
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', () => {
-	const contactSchema = mongoose.Schema({
+	const feedbackSchema = mongoose.Schema({
 		name: String,
 		email: String,
 		rating: Number,
@@ -17,5 +16,5 @@ db.once('open', () => {
 		sendAt: Date
 	})
 
-	exports.Contact = mongoose.model('Contact', contactSchema)
+	exports.Feedback = mongoose.model('Feedback', feedbackSchema)
 })

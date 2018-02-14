@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
 	<head>
-		<title>fieldsback</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta name="author" content="Gabriel Rufino">
+		<meta name="description" content="fieldsback project">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>fieldsback</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/fieldsback.css">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
 	
 	<body>
-		<header>
-			<hgroup>
-				<h1>fieldsback</h1>
-				<h2>The fast feedback system</h2>
-			</hgroup>
+		<header class="text-center">
+			<h1>fieldsback</h1>
+			<h2>The efficient feedback system</h2>
 		</header>
 		
-		<div id="core">
+		<div class="container">
 			<form method="post" action="thanks">
-				<label for="name">Name: </label>
-				<input type="text" name="name" id="name" class="fields" placeholder="Your Name"><br>
+				<div class="form-group">
+						<label for="name">Nome</label>
+						<input class="form-control" type="text" name="name" id="name" class="form-control" placeholder="Seu Nome" required="required">		
+				</div>
+
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input class="form-control" type="email" name="email" id="email" class="form-control" placeholder="seuemail@email.com" required="required">
+				</div>
+
+				<label>Que nota nosso produto merece?</label>
+				<div class="form-group">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="rating" value="1">
+						<label class="form-check-label">1</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="rating" value="2">
+						<label class="form-check-label">2</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="rating" value="3">
+						<label class="form-check-label">3</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="rating" value="4">
+						<label class="form-check-label">4</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="rating" value="5" checked="checked">
+						<label class="form-check-label">5</label>
+					</div>	
+				</div>
 				
-				<label for="email">E-mail: </label>
-				<input type="email" name="email" id="email" class="fields" placeholder="youremail@mail.com"><br>
+				<div class="form-group">
+					<label for="message">Descrição</label><br>
+					<textarea class="form-control" name="message" id="message" rows="5" cols="60" class="form-control" required="required" placeholder="Descreva aqui a sua avaliação ao nosso produto. Como podemos melhorar?"></textarea><br>		
+				</div>
 				
-				<label for="rating">Rating: </label>
-				1<input type="range" name="rating" id="rating" min="1" max="5">5<br>
-				
-				<label for="message">Message: </label><br>
-				<textarea name="message" id="message" rows="5" cols="60" class="fields" placeholder="We'd love to hear your opinion."></textarea><br>
-				
-				<button>Send it</button>
+				<button class="btn btn-primary">Enviar</button>
 			</form>
 		</div>
+
+		<!-- Bootstrap, js -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<!--  -->		
+		<script src="js/fieldsback.js"></script>
 	</body>
 </html>

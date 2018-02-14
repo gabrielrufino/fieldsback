@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/thanks', (req, res) => {
-	const newContact = new db.Contact({
+	const newFeedback = new db.Feedback({
 		name: req.body.name,
 		email: req.body.email,
 		rating: req.body.rating,
@@ -20,7 +20,7 @@ app.post('/thanks', (req, res) => {
 		sendAt: new Date()
 	})
 
-	newContact.save((err) => {
+	newFeedback.save((err) => {
 		if (err)
 			res.send(err)
 		else
@@ -31,8 +31,7 @@ app.post('/thanks', (req, res) => {
 					res.send(data)
 			})
 	})
-})	// Tratar possível reenvio das mesmas informações ;)
-
+})
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
