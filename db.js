@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const Feedback = require('./models/feedback')
+
 const db = mongoose.connection
 
 mongoose.connect('mongodb://localhost/fieldsback', (err) => {
@@ -7,14 +9,3 @@ mongoose.connect('mongodb://localhost/fieldsback', (err) => {
 })
 
 db.on('error', console.error.bind(console, 'connection error:'))
-db.once('open', () => {
-	const feedbackSchema = mongoose.Schema({
-		name: String,
-		email: String,
-		rating: Number,
-		message: String,
-		sendAt: Date
-	})
-
-	exports.Feedback = mongoose.model('Feedback', feedbackSchema)
-})

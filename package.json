@@ -4,7 +4,7 @@
   "description": "The efficient feedback system",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "start mongod && nodemon index.js",
     "start": "node index.js",
     "nodemon": "nodemon index.js"
   },
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/gabrielrufino/fieldsback#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mongoose": "^5.0.0-rc0"
   },
