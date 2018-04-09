@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "start mongod && nodemon index.js",
-    "start": "node index.js",
-    "nodemon": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,5 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.0-rc0"
   },
-  "devDependencies": {
-    "nodemon": "^1.14.12"
-  }
+  "devDependencies": {}
 }
