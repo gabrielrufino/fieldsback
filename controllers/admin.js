@@ -1,12 +1,16 @@
+const express = require('express')
+const router = express.Router()
 const mongoose = require('mongoose')
 const Feedback = mongoose.model('Feedback')
 
-module.exports = (req, res) => {
+router.get('/', (req, res) => {
   Feedback.find((err, feedbacks) => {
-    if (!err) {
-      res.render('admin', { feedbacks })
-    } else {
+    if (err) {
       res.send('Erro na captação dos feedbacks')
+    } else {
+      res.render('admin', { feedbacks })
     }
   })
-}
+})
+
+module.exports = router

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>fieldsback</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+  <%- include('elements/head') %>
 
   <body>
-		<ul>
-      <% feedbacks.forEach(feedback => { %>
-        <li><%= feedback %></li>
-      <% }) %>
-    </ul>
+  <%- include('elements/header') %>
+
+  <div class="container">
+    <%- include('elements/title', {title: 'Feedback list'}) %>
+      
+    <% feedbacks.forEach(feedback => { %>
+      <div class="bg-primary rounded py-4 my-2">
+        <div class="container text-white">
+          <h4 class="text-center"><%= feedback.name %></h4>
+          <div><strong>E-mail:</strong> <%= feedback.email %></div>
+          <div><strong>Rating:</strong> <%= feedback.rating %></div>
+          <div class="text-right"><button class="btn btn-outline-light btn-lg my-3">Analyze</button></div>
+        </div>
+      </div>  
+    <% }) %>
+    </div>
   </body>
 </html>
