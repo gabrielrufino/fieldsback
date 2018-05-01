@@ -5,9 +5,9 @@ Feedback system based in the feedback quality: the best feedbacks are more likel
 ## Install
 
 <pre>
-  git clone https://github.com/gabrielrufino/fieldsback<br>
-  cd fieldsback<br>
-  npm install<br>
+  git clone https://github.com/gabrielrufino/fieldsback
+  cd fieldsback
+  npm install
 </pre>
 
 ## Start MongoDB
