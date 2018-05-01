@@ -11,6 +11,7 @@ app.use(bodyParser.json()) // Parse application/json
 
 app.use('/', require('./controllers/index'))
 app.use('/thanks', require('./controllers/check-out'))
+app.use('/login', require('./controllers/login'))
 app.use('/admin', require('./controllers/admin'))
 
 module.exports = app

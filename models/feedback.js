@@ -23,6 +23,10 @@ const feedbackSchema = mongoose.Schema({
   sendDate: {
     type: Date,
     default: new Date()
+  },
+  evaluated: {
+    type: Boolean,
+    default: false
   }
 })
 

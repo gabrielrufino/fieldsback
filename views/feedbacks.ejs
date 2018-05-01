@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <%- include('elements/head') %>
+
+  <body>
+    <%- include('elements/header') %>
+
+    <div class="container">
+      <%- include('elements/title', {title: 'Feedback list'}) %>
+        
+      <% feedbacks.forEach(feedback => { %>
+        <div class="bg-primary rounded py-4 my-2">
+          <div class="container text-white">
+            <h4 class="text-center"><%= feedback.name %></h4>
+            <div><strong>E-mail:</strong> <%= feedback.email %></div>
+            <div><strong>Rating:</strong> <%= feedback.rating %></div>
+            <div class="text-right"><button class="btn btn-outline-light btn-lg my-3">Analyze</button></div>
+          </div>
+        </div>  
+      <% }) %>
+    </div>
+  </body>
+
+  <%- include('elements/scripts') %>
+</html>

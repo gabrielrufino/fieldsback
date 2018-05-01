@@ -1,14 +1,12 @@
 const express = require('express')
 const router = express.Router()
 
-router.use('/feedbacks', require('./feedbacks'))
-
 router.get('/', (req, res) => {
-  res.render('admin')
+  res.render('login')
 })
 
-router.all('/', (req, res) => {
-  res.redirect('/')
+router.post('/', (req, res) => {
+  res.json(req.body)
 })
 
 module.exports = router

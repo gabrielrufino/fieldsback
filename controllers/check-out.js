@@ -18,9 +18,9 @@ router.post('/', (req, res) => {
 
   newFeedback.save((err, feeedback) => {
     if (err) {
-      res.send(err)
+      res.render('error', {error: err})
     } else {
-      res.render('check-out', { name: newFeedback.name })
+      res.render('check-out', {name: newFeedback.name})
     }
   })
 })
