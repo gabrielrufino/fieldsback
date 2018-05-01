@@ -6,5 +6,6 @@ db.on('error', console.error.bind(console, 'connection error:'))
 
 // Loading models
 require('./models/feedback')
+require('./models/manager')
 
 module.exports = db

@@ -4,7 +4,14 @@ const router = express.Router()
 router.use('/feedbacks', require('./feedbacks'))
 
 router.get('/', (req, res) => {
-  res.render('admin')
+  // For when, auth must be true.
+  // Implement verification
+  const auth = true
+  if (auth) {
+    res.render('admin')
+  } else {
+    res.redirect('/login')
+  }
 })
 
 router.all('/', (req, res) => {
