@@ -13,5 +13,6 @@ app.use('/', require('./controllers/index'))
 app.use('/thanks', require('./controllers/check-out'))
 app.use('/login', require('./controllers/login'))
 app.use('/admin', require('./controllers/admin'))
+app.use('/*', require('./controllers/notfound'))
 
 module.exports = app
