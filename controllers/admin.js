@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const mongoose = require('mongoose')
+const Feedback = mongoose.model('Feedback')
 
 router.use('/feedbacks', require('./feedbacks'))
 
@@ -8,7 +10,16 @@ router.get('/', (req, res) => {
   // Implement verification
   const auth = true
   if (auth) {
-    res.render('admin')
+    Feedback.find((err, feedbacks) => {
+      if (err) {
+        res.render('dashboard', {data: {}})
+      } else {
+        const data = {
+          total: feedbacks.length
+        }
+        res.render('dashboard', {data: data})
+      }
+    })
   } else {
     res.redirect('/login')
   }

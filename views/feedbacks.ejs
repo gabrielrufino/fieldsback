@@ -7,8 +7,9 @@
     <%- include('elements/header') %>
 
     <div class="container">
-      <%- include('elements/title', {title: 'Feedback list'}) %>
-        
+      <%- include('elements/title', {title: 'Admin Panel'}) %>
+      <%- include('elements/adminMenu') %>
+
       <% feedbacks.forEach(feedback => { %>
         <div class="bg-primary rounded py-4 my-2">
           <div class="container text-white">
