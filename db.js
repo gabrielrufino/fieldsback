@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/fieldsback')
-
 const db = mongoose.connection
+
+const database = process.env.DATABASE || 'mongodb://localhost/fieldsback'
+mongoose.connect(database)
+
 db.on('error', console.error.bind(console, 'connection error:'))
 
 // Loading models

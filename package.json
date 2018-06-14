@@ -19,6 +19,7 @@
   "homepage": "https://github.com/gabrielrufino/fieldsback#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^6.0.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mongoose": "^5.0.0-rc0"
