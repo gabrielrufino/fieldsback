@@ -24,9 +24,15 @@ const feedbackSchema = mongoose.Schema({
     type: Date,
     default: new Date()
   },
-  evaluated: {
+  checked: {
     type: Boolean,
     default: false
+  },
+  ranking: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 100
   }
 })
 

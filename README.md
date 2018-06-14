@@ -31,7 +31,7 @@ $ sudo service mongod start
 
 <strong>Windows:</strong>
 <pre>
-> mongod
+> start mongod
 </pre>
 
 ### Run fieldsback!
@@ -47,6 +47,22 @@ And now, you can access the application  in http://localhost:3000
 You can change some environment variables in the .env file.
 
 <ul>
-	<li>DATABASE</li>
-	<li>PORT</li>
+  <li>DATABASE</li>
+  <li>PORT</li>
 </ul>
+
+## Feedback structure
+
+<pre>
+{
+  "_id": ObjectId("5b22c9b8232b331e481cf27f"),
+  "sendDate": ISODate("2018-06-14T20:02:00.308Z"),
+  "checked": true,
+  "ranking": 64,
+  "name": "Gabriel Rufino",
+  "email": "contato@gabrielrfuino.com",
+  "rating": 4,
+  "message": "Lorem Ipsum ... ",
+  "__v": 0
+}
+</pre>
