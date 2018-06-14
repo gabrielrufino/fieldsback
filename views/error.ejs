@@ -3,13 +3,17 @@
 <html lang="en">
   <%- include('elements/head') %>
 
-  <body>
+  <body class="bg-light">
     <%- include('elements/header') %>
 
-    <div class="jumbotron">
-		  <%- include('elements/title', {title: 'Error'}) %>
-      <p class="lead"><%= error %></p>
-      <a class="btn btn-danger" href="/">Exit</a>
+    <div class="container mt-5">
+      <div class="jumbotron">
+        <h1 class="display-4"><i class="far fa-times-circle text-danger"></i> Some is wrong!</h1>
+        <div class="my-5">
+          <p class="lead"><%= error %></p>
+        </div>
+        <a class="btn btn-danger" href="/">Exit</a>
+      </div>
     </div>
 
     <%- include('elements/scripts') %>

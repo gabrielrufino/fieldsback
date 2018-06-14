@@ -3,23 +3,38 @@
 <html lang="en">
   <%- include('elements/head') %>
 
-  <body>
+  <body class="bg-dark">
     <%- include('elements/header') %>
     
-    <div class="container">
+    <div class="container text-white">
       <%- include('elements/title', {title: 'Login'}) %>
 
-      <form method="post" action="/login">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="Enter the username here"/>
+      <div class="row">
+        <div class="col-md-6">
+          <form method="post" action="/login">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter the username here"/>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Input your password here"/>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-lg px-5 py-1">Login</button>
+            </div>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Input your password here"/>
+        <div class="col-md-6">
+          <ul class="lead">
+            <li>Cras justo odio Dapibus ac facilisis in</li>
+            <li>Dapibus ac facilisis in Morbi leo risus</li>
+            <li>Morbi leo risus Porta ac consectetur ac</li>
+            <li>Porta ac consectetur ac Vestibulum at eros</li>
+            <li>Vestibulum at eros Cras justo odio</li>
+          </ul>
         </div>
-        <button type="submit" class="btn btn-success">Login</button>
-      </form>
+      </div>
     </div>
   </body>
 

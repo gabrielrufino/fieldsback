@@ -3,14 +3,20 @@
 <html lang="en">
   <%- include('elements/head') %>
   
-  <body>
+  <body class="bg-light">
     <%- include('elements/header') %>
 
-    <div class="jumbotron">
-      <h1 class="display-4">Thanks, <%= name %>!</h1>
-      <hr/>
-      <p class="lead">Your opinion is very valuable to us. ;)</p>
-      <a href="#" class="btn btn-success btn-lg">Latest offers</a>
+    <div class="container mt-5">
+      <div class="jumbotron">
+        <h1 class="display-4"><i class="far fa-check-circle text-success"></i> Thanks, <%= name %>!</h1>
+        <hr>
+        <div class="my-5">
+          <p class="lead">
+            Your opinion is very valuable to us. ;)
+          </p>
+        </div>
+        <a href="#" class="btn btn-success">Latest offers</a>
+      </div>
     </div>
 
     <%- include('elements/scripts') %>
