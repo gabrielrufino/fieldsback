@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "start mongod && nodemon index.js",
+    "dev": "node node_modules/nodemon/bin/nodemon index",
     "start": "node index.js"
   },
   "repository": {
