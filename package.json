@@ -4,7 +4,7 @@
   "description": "The efficient feedback system",
   "main": "index.js",
   "scripts": {
-    "test": "start mongod && nodemon index.js",
+    "test": "echo 'Testing'",
     "dev": "node node_modules/nodemon/bin/nodemon index",
     "start": "node index.js"
   },
