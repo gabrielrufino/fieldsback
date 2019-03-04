@@ -8,11 +8,13 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  const { name, email, rating, message } = req.body
+
   const newFeedback = new Feedback({
-    name: req.body.name,
-    email: req.body.email,
-    rating: req.body.rating,
-    message: req.body.message,
+    name,
+    email,
+    rating,
+    message,
     sendDate: new Date()
   })
 
