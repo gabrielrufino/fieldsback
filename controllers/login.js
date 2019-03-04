@@ -8,9 +8,11 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  const { username, password } = req.body
+
   Manager.findOne({
-    username: req.body.username,
-    password: req.body.password
+    username,
+    password
   }, (err, manager) => {
     if (manager && !err) {
       res.redirect('/admin')
