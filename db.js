@@ -10,7 +10,7 @@ const {
 } = process.env
 
 const databaseUrl = `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}`
-mongoose.connect(databaseUrl)
+mongoose.connect(databaseUrl, { useNewUrlParser: true })
 
 db.on('error', console.error.bind(console, 'connection error:'))
 
