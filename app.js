@@ -15,4 +15,9 @@ app.use('/login', require('./controllers/login'))
 app.use('/admin', require('./controllers/admin'))
 app.use('/*', require('./controllers/notfound'))
 
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log('fieldsback listening on', port)
+})
+
 module.exports = app
