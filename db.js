@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const db = mongoose.connection
+const db       = mongoose.connection
 
 const database = process.env.DATABASE || 'mongodb://localhost/fieldsback'
 mongoose.connect(database)
