@@ -1,7 +1,7 @@
-const express = require('express')
-const router = express.Router()
+const express  = require('express')
+const router   = express.Router()
 const mongoose = require('mongoose')
-const Manager = mongoose.model('Manager')
+const Manager  = mongoose.model('Manager')
 
 router.get('/', (req, res) => {
   res.render('login')

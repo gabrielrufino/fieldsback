@@ -1,7 +1,7 @@
-const express = require('express')
-const router = express.Router()
-const mongoose = require('mongoose')
-const Feedback = mongoose.model('Feedback')
+const express   = require('express')
+const router    = express.Router()
+const mongoose  = require('mongoose')
+const Feedback  = mongoose.model('Feedback')
 
 router.use('/feedbacks', require('./feedbacks'))
 
